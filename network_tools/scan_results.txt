@@ -1,0 +1,6 @@
+Port 22 is open
+Banner: 
+
+Port 80 is open
+Banner: Banner not available
+
