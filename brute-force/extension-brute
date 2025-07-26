@@ -1,0 +1,16 @@
+import requests
+url = input("Enter url for brute force: ").strip()
+wordlist = input("Enter wordlist: ").strip()
+with open(wordlist, "r") as file:
+    for extension in file:
+        extension = extension.strip()
+        target_url = f"{url}.{extension}"
+        try:
+            response = requests.get(url, extension)
+            if "success" in response.text or response.status_code == 200:
+                print(f"extension {extension} accepted in {url}")
+            else:
+                print(f"extension {extension} blocked in {url}")
+        except Exceptipn as e:
+            print(f"error occured {e}!")
+
