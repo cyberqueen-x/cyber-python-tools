@@ -1,3 +1,5 @@
+secret
+jwtkey
 admin123
 letmein
 qwerty
